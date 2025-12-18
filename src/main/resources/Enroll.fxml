@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.Controller.EnrollController"
+            prefWidth="1000" prefHeight="750"
+            style="-fx-background-color: #f1f5f9;">
+
+    <center>
+        <VBox spacing="20" style="-fx-padding: 25;">
+            <!-- Page Header -->
+            <VBox spacing="8">
+                <Label text="My Enrolled Courses" style="-fx-font-weight: bold; -fx-font-size: 28px; -fx-text-fill: #1e293b;" />
+                <Label text="View and manage your enrolled courses" style="-fx-font-size: 14px; -fx-text-fill: #64748b;" />
+            </VBox>
+
+            <!-- Scrollable Courses -->
+            <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;">
+                <VBox fx:id="vboxEnrolled" spacing="15" style="-fx-padding: 5;">
+                    <!-- Enrolled course cards will be dynamically added here -->
+                </VBox>
+            </ScrollPane>
+        </VBox>
+    </center>
+
+</BorderPane>

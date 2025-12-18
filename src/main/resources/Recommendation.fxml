@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.Controller.RecommendationController"
+            prefWidth="1000" prefHeight="750"
+            style="-fx-background-color: #f1f5f9;">
+
+    <center>
+        <VBox spacing="20" style="-fx-padding: 25;">
+            <!-- Page Header -->
+            <VBox spacing="8">
+                <Label text="Recommended Courses" style="-fx-font-weight: bold; -fx-font-size: 28px; -fx-text-fill: #1e293b;" />
+                <Label text="Personalized course recommendations just for you" style="-fx-font-size: 14px; -fx-text-fill: #64748b;" />
+            </VBox>
+
+            <!-- Search Bar -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <TextField fx:id="searchField" promptText="Search courses by topic..." 
+                           HBox.hgrow="ALWAYS"
+                           style="-fx-background-radius: 12; -fx-padding: 12 18; -fx-background-color: white; -fx-border-color: #e2e8f0; -fx-border-width: 1.5; -fx-border-radius: 12; -fx-font-size: 14px;" />
+                <Button fx:id="searchBtn" text="Search"
+                        style="-fx-background-color: #3b82f6; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 12; -fx-padding: 12 25; -fx-cursor: hand; -fx-effect: dropshadow(gaussian, rgba(59,130,246,0.3), 8, 0, 0, 2);" />
+            </HBox>
+
+            <!-- Scrollable Courses -->
+            <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;">
+                <VBox fx:id="vboxCourses" spacing="15" style="-fx-padding: 5;">
+                    <!-- Recommended courses will be dynamically added here -->
+                </VBox>
+            </ScrollPane>
+        </VBox>
+    </center>
+
+</BorderPane>

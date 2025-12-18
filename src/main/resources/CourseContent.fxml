@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="750.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controller.CourseContentController">
+    <children>
+        <ScrollPane AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" 
+                    hbarPolicy="NEVER" vbarPolicy="AS_NEEDED" fitToWidth="true"
+                    style="-fx-background-color: #f1f5f9;">
+            <content>
+                <VBox spacing="25" style="-fx-padding: 30;" minWidth="800" prefWidth="800">
+                    
+                    <!-- Course Header Card -->
+                    <VBox spacing="15" style="-fx-background-color: white; -fx-padding: 30; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);" prefWidth="770">
+                        <Label fx:id="titleLabel" style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #1e293b;" wrapText="true" prefWidth="710" />
+                        
+                        <HBox spacing="20" alignment="CENTER_LEFT">
+                            <Label fx:id="levelLabel" style="-fx-font-size: 13px; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 6 12; -fx-background-color: #3b82f6; -fx-background-radius: 20;" />
+                            <Label fx:id="publishDateLabel" style="-fx-font-size: 14px; -fx-text-fill: #64748b;" />
+                        </HBox>
+                        
+                        <Label fx:id="authorLabel" style="-fx-font-size: 15px; -fx-text-fill: #475569; -fx-font-weight: bold;" wrapText="true" prefWidth="710" />
+                        <Label fx:id="topicsLabel" style="-fx-font-size: 14px; -fx-text-fill: #64748b;" wrapText="true" prefWidth="710" />
+                    </VBox>
+                    
+                    <!-- Course Description Card -->
+                    <VBox spacing="12" style="-fx-background-color: white; -fx-padding: 25; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);" prefWidth="770">
+                        <Label text="About This Course" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1e293b;" />
+                        <TextArea fx:id="descriptionTextArea" editable="false" wrapText="true" 
+                                  style="-fx-font-size: 14px; -fx-text-fill: #475569; -fx-background-color: #f8fafc; -fx-border-color: #e2e8f0; -fx-border-width: 1; -fx-border-radius: 10; -fx-padding: 15;" 
+                                  prefWidth="720" prefRowCount="4" />
+                    </VBox>
+                    
+                    <!-- Course Content Section -->
+                    <VBox spacing="15" style="-fx-background-color: white; -fx-padding: 25; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);" prefWidth="770">
+                        <Label text="Course Modules" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1e293b;" />
+                        <VBox fx:id="contentVBox" spacing="15" prefWidth="720" />
+                    </VBox>
+                    
+                    <!-- Action Buttons -->
+                    <HBox alignment="CENTER" spacing="15" style="-fx-padding: 10;">
+                        <Button fx:id="backBtn" onAction="#handleBack" text="← Back to Courses" 
+                                style="-fx-background-color: #64748b; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-padding: 12 25; -fx-cursor: hand;" />
+                        <Button fx:id="markCompletedBtn" onAction="#handleMarkCompleted" text="Mark Completed" 
+                                style="-fx-background-color: #10b981; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-padding: 12 30; -fx-cursor: hand; -fx-effect: dropshadow(gaussian, rgba(16,185,129,0.3), 8, 0, 0, 2);" />
+                    </HBox>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

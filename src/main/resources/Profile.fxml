@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.Controller.ProfileController"
+            prefWidth="1000" prefHeight="750"
+            style="-fx-background-color: #f1f5f9;">
+
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;">
+            <VBox spacing="25" style="-fx-padding: 30; -fx-alignment: top-center;">
+
+                <!-- Page Title -->
+                <Label text="My Profile" style="-fx-font-weight: bold; -fx-font-size: 32px; -fx-text-fill: #1e293b;" />
+
+                <!-- Profile Information Card -->
+                <VBox spacing="20" style="-fx-background-color: white; -fx-padding: 30; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);" prefWidth="700">
+                    <Label text="Personal Information" style="-fx-font-weight: bold; -fx-font-size: 20px; -fx-text-fill: #1e293b;" />
+                    
+                    <GridPane hgap="20" vgap="18">
+                        <Label text="Username:" GridPane.rowIndex="0" GridPane.columnIndex="0" 
+                               style="-fx-font-size: 14px; -fx-text-fill: #64748b; -fx-font-weight: bold;" />
+                        <TextField fx:id="txtUsername" GridPane.rowIndex="0" GridPane.columnIndex="1" 
+                                   style="-fx-background-radius: 8; -fx-padding: 10; -fx-background-color: #f8fafc; -fx-border-color: #e2e8f0; -fx-border-width: 1; -fx-border-radius: 8;" />
+
+                        <Label text="Full Name:" GridPane.rowIndex="1" GridPane.columnIndex="0" 
+                               style="-fx-font-size: 14px; -fx-text-fill: #64748b; -fx-font-weight: bold;" />
+                        <TextField fx:id="txtFullName" GridPane.rowIndex="1" GridPane.columnIndex="1" 
+                                   style="-fx-background-radius: 8; -fx-padding: 10; -fx-background-color: #f8fafc; -fx-border-color: #e2e8f0; -fx-border-width: 1; -fx-border-radius: 8;" />
+
+                        <Label text="Phone:" GridPane.rowIndex="2" GridPane.columnIndex="0" 
+                               style="-fx-font-size: 14px; -fx-text-fill: #64748b; -fx-font-weight: bold;" />
+                        <TextField fx:id="txtPhone" GridPane.rowIndex="2" GridPane.columnIndex="1" 
+                                   style="-fx-background-radius: 8; -fx-padding: 10; -fx-background-color: #f8fafc; -fx-border-color: #e2e8f0; -fx-border-width: 1; -fx-border-radius: 8;" />
+
+                        <Label text="Email:" GridPane.rowIndex="3" GridPane.columnIndex="0" 
+                               style="-fx-font-size: 14px; -fx-text-fill: #64748b; -fx-font-weight: bold;" />
+                        <TextField fx:id="txtEmail" GridPane.rowIndex="3" GridPane.columnIndex="1" 
+                                   style="-fx-background-radius: 8; -fx-padding: 10; -fx-background-color: #f8fafc; -fx-border-color: #e2e8f0; -fx-border-width: 1; -fx-border-radius: 8;" />
+
+                        <Label text="Age:" GridPane.rowIndex="4" GridPane.columnIndex="0" 
+                               style="-fx-font-size: 14px; -fx-text-fill: #64748b; -fx-font-weight: bold;" />
+                        <TextField fx:id="txtAge" GridPane.rowIndex="4" GridPane.columnIndex="1" 
+                                   style="-fx-background-radius: 8; -fx-padding: 10; -fx-background-color: #f8fafc; -fx-border-color: #e2e8f0; -fx-border-width: 1; -fx-border-radius: 8;" />
+
+                        <Label text="Current Level:" GridPane.rowIndex="5" GridPane.columnIndex="0" 
+                               style="-fx-font-size: 14px; -fx-text-fill: #64748b; -fx-font-weight: bold;" />
+                        <Label fx:id="lblLevel" GridPane.rowIndex="5" GridPane.columnIndex="1" 
+                               style="-fx-font-weight: bold; -fx-text-fill: #3b82f6; -fx-font-size: 15px; -fx-padding: 10;" />
+
+                        <!-- Password Change Section -->
+                        <Label text="Change Password" GridPane.rowIndex="6" GridPane.columnIndex="0" GridPane.columnSpan="2"
+                               style="-fx-font-size: 16px; -fx-text-fill: #1e293b; -fx-font-weight: bold; -fx-padding: 10 0 5 0;" />
+
+                        <Label text="Current Password:" GridPane.rowIndex="7" GridPane.columnIndex="0" 
+                               style="-fx-font-size: 14px; -fx-text-fill: #64748b; -fx-font-weight: bold;" />
+                        <PasswordField fx:id="txtCurrentPassword" GridPane.rowIndex="7" GridPane.columnIndex="1" 
+                                        style="-fx-background-radius: 8; -fx-padding: 10; -fx-background-color: #f8fafc; -fx-border-color: #e2e8f0; -fx-border-width: 1; -fx-border-radius: 8;" />
+
+                        <Label text="New Password:" GridPane.rowIndex="8" GridPane.columnIndex="0" 
+                               style="-fx-font-size: 14px; -fx-text-fill: #64748b; -fx-font-weight: bold;" />
+                        <PasswordField fx:id="txtNewPassword" GridPane.rowIndex="8" GridPane.columnIndex="1" 
+                                        style="-fx-background-radius: 8; -fx-padding: 10; -fx-background-color: #f8fafc; -fx-border-color: #e2e8f0; -fx-border-width: 1; -fx-border-radius: 8;" />
+
+                        <Label text="Confirm New Password:" GridPane.rowIndex="9" GridPane.columnIndex="0" 
+                               style="-fx-font-size: 14px; -fx-text-fill: #64748b; -fx-font-weight: bold;" />
+                        <PasswordField fx:id="txtConfirmNewPassword" GridPane.rowIndex="9" GridPane.columnIndex="1" 
+                                        style="-fx-background-radius: 8; -fx-padding: 10; -fx-background-color: #f8fafc; -fx-border-color: #e2e8f0; -fx-border-width: 1; -fx-border-radius: 8;" />
+                    </GridPane>
+
+                    <Button text="💾 Save Changes" fx:id="btnSaveProfile" 
+                            style="-fx-background-color: #3b82f6; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 15px; -fx-background-radius: 10; -fx-padding: 12 30; -fx-cursor: hand; -fx-effect: dropshadow(gaussian, rgba(59,130,246,0.3), 8, 0, 0, 2);" />
+                </VBox>
+
+                <!-- Course History Card -->
+                <VBox spacing="15" style="-fx-background-color: white; -fx-padding: 30; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);" prefWidth="700">
+                    <Label text="Course History" style="-fx-font-weight: bold; -fx-font-size: 20px; -fx-text-fill: #1e293b;" />
+
+                    <ScrollPane fx:id="courseScrollPane" fitToWidth="true" style="-fx-background-color: transparent;">
+                        <TableView fx:id="tableCourseHistory" style="-fx-background-color: transparent;">
+                            <columns>
+                                <TableColumn fx:id="colCourseName" text="Course Name" prefWidth="400" 
+                                             style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+                                <TableColumn fx:id="colLevel" text="Level" prefWidth="150" 
+                                             style="-fx-font-size: 14px;" />
+                                <TableColumn fx:id="colStatus" text="Status" prefWidth="150" 
+                                             style="-fx-font-size: 14px;" />
+                            </columns>
+                        </TableView>
+                    </ScrollPane>
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

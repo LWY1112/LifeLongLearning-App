@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="750" prefWidth="1000" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controller.MainController">
+    <children>
+        <BorderPane prefHeight="750" prefWidth="1000" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+
+            <!-- Modern Left Sidebar -->
+            <left>
+                <VBox prefHeight="750.0" prefWidth="220.0" spacing="0" style="-fx-background-color: #1e293b;">
+                    <!-- Logo Section -->
+                    <VBox spacing="5" style="-fx-padding: 25 20; -fx-background-color: #0f172a;">
+                        <Label style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;" text="PathLearner" />
+                        <Label style="-fx-text-fill: #94a3b8; -fx-font-size: 12px;" text="Learning Platform" />
+                    </VBox>
+                    
+                    <!-- Navigation Buttons -->
+                    <VBox spacing="8" style="-fx-padding: 20;">
+                        <Button fx:id="btnProfile" style="-fx-text-fill: #cbd5e1; -fx-background-color: transparent; -fx-font-size: 15px; -fx-alignment: center-left; -fx-padding: 12 15; -fx-background-radius: 10; -fx-cursor: hand;" text="Profile" />
+                        <Button fx:id="btnCourses" style="-fx-text-fill: #cbd5e1; -fx-background-color: transparent; -fx-font-size: 15px; -fx-alignment: center-left; -fx-padding: 12 15; -fx-background-radius: 10; -fx-cursor: hand;" text="Courses" />
+                        <Button fx:id="btnRecommendations" style="-fx-text-fill: #cbd5e1; -fx-background-color: transparent; -fx-font-size: 15px; -fx-alignment: center-left; -fx-padding: 12 15; -fx-background-radius: 10; -fx-cursor: hand;" text="Recommendations" />
+                        <Button fx:id="btnEnrolled" style="-fx-text-fill: #cbd5e1; -fx-background-color: transparent; -fx-font-size: 15px; -fx-alignment: center-left; -fx-padding: 12 15; -fx-background-radius: 10; -fx-cursor: hand;" text="Enrolled" />
+                    </VBox>
+                    
+                    <!-- Logout Button at Bottom -->
+                    <Region VBox.vgrow="ALWAYS" />
+                    <VBox style="-fx-padding: 20;">
+                        <Button fx:id="btnLogout" style="-fx-text-fill: #ef4444; -fx-background-color: rgba(239,68,68,0.1); -fx-font-size: 15px; -fx-alignment: center-left; -fx-padding: 12 15; -fx-background-radius: 10; -fx-cursor: hand; -fx-border-color: rgba(239,68,68,0.3); -fx-border-width: 1; -fx-border-radius: 10;" text="Logout" />
+                    </VBox>
+                </VBox>
+            </left>
+
+            <!-- Main Content Area -->
+            <center>
+                <StackPane fx:id="contentPane" prefHeight="750.0" prefWidth="780.0" style="-fx-background-color: #f1f5f9;">
+                    <Label text="Welcome! Select an option from the sidebar." style="-fx-font-size: 16px; -fx-text-fill: #64748b;" />
+                </StackPane>
+            </center>
+
+        </BorderPane>
+    </children>
+</AnchorPane>

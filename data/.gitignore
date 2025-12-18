@@ -1,0 +1,7 @@
+# Ignore all user data files
+*.dat
+user.txt
+
+# But keep this .gitignore file
+!.gitignore
+

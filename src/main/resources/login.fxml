@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controller.LoginController">
+    <children>
+        <!-- Background Image with Overlay -->
+        <ImageView fitHeight="750" fitWidth="1000" pickOnBounds="true" preserveRatio="false">
+            <image>
+                <Image url="@Image/campus.png" />
+            </image>
+        </ImageView>
+        
+        <!-- Dark overlay for better contrast -->
+        <Region prefHeight="750" prefWidth="1000" style="-fx-background-color: rgba(0,0,0,0.3);"/>
+
+        <!-- Modern Login Card -->
+        <VBox alignment="CENTER" layoutX="350.0" layoutY="100.0" prefHeight="550.0" prefWidth="300.0" spacing="25" 
+              style="-fx-background-color: rgba(255,255,255,0.98); -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 20, 0, 0, 5); -fx-padding: 40;">
+            
+            <!-- Logo/Title Section -->
+            <VBox alignment="CENTER" spacing="10">
+                <Label style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #1e3a8a;" text="PathLearner" />
+                <Label style="-fx-font-size: 16px; -fx-text-fill: #64748b;" text="Welcome Back" />
+            </VBox>
+
+            <!-- Form Fields -->
+            <VBox spacing="20" prefWidth="220.0">
+                <VBox spacing="8">
+                    <Label style="-fx-font-size: 13px; -fx-text-fill: #475569; -fx-font-weight: bold;" text="Username" />
+                    <TextField fx:id="usernameField" promptText="Enter your username" 
+                               style="-fx-background-radius: 10; -fx-padding: 12; -fx-background-color: #f8fafc; -fx-border-color: #e2e8f0; -fx-border-width: 1.5; -fx-border-radius: 10; -fx-font-size: 14px;" />
+                </VBox>
+
+                <VBox spacing="8">
+                    <Label style="-fx-font-size: 13px; -fx-text-fill: #475569; -fx-font-weight: bold;" text="Password" />
+                    <PasswordField fx:id="passwordField" promptText="Enter your password" 
+                                   style="-fx-background-radius: 10; -fx-padding: 12; -fx-background-color: #f8fafc; -fx-border-color: #e2e8f0; -fx-border-width: 1.5; -fx-border-radius: 10; -fx-font-size: 14px;" />
+                </VBox>
+
+                <Button fx:id="loginBtn" onAction="#handleLogin" 
+                        style="-fx-background-color: #3b82f6; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 15px; -fx-background-radius: 10; -fx-padding: 12 30; -fx-cursor: hand; -fx-effect: dropshadow(gaussian, rgba(59,130,246,0.3), 8, 0, 0, 2);" 
+                        text="Sign In" />
+            </VBox>
+
+            <!-- Links Section -->
+            <VBox spacing="12" alignment="CENTER">
+                <Hyperlink onAction="#handleForgotPassword" 
+                           style="-fx-font-size: 13px; -fx-text-fill: #3b82f6; -fx-underline: false; -fx-cursor: hand;" 
+                           text="Forgot Password?" />
+                <HBox spacing="5" alignment="CENTER">
+                    <Label style="-fx-font-size: 13px; -fx-text-fill: #64748b;" text="Don't have an account?" />
+                    <Hyperlink onAction="#handleGoToRegister" 
+                               style="-fx-font-size: 13px; -fx-text-fill: #3b82f6; -fx-font-weight: bold; -fx-underline: false; -fx-cursor: hand;" 
+                               text="Sign Up" />
+                </HBox>
+            </VBox>
+        </VBox>
+    </children>
+</AnchorPane>
