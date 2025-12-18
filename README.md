@@ -1,4 +1,4 @@
-# PathLearner - Learning Management System
+# PathLearner - LifeLong Learning App
 
 A JavaFX-based learning platform that allows users to enroll in courses, track progress, and advance through different learning levels.
 
